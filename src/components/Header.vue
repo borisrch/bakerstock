@@ -15,17 +15,20 @@
                 <ul class="nav navbar-nav">
                     <router-link to="/inventory"
                                  activeClass="active"
-                                 tag="li"><a>Inventory</a></router-link>
+                                 tag="li">
+                        <a><ion-icon class="icon-nav" name="cube"></ion-icon>Inventory</a></router-link>
 
                     <router-link to="/order"
                                  activeClass="
                                  active"
-                                 tag="li"><a>Order</a></router-link>
+                                 tag="li">
+                        <a><ion-icon class="icon-nav" name="clipboard"></ion-icon>Order</a></router-link>
 
                     <router-link to="/notes"
                                  activeClass="
                                  active"
-                                 tag="li"><a>Notes</a></router-link>
+                                 tag="li">
+                        <a><ion-icon class="icon-nav" name="today"></ion-icon>Notes</a></router-link>
                 </ul>
                 <p class="navbar-text navbar-right">Funds: {{ funds | currency }}</p>
 
@@ -112,9 +115,12 @@
         border-bottom: 4px solid rgb(0, 182, 85);
         overflow: hidden;
     }
+    .navbar-default .navbar-nav>.active>a>.icon-nav {
+        color: rgb(0, 182, 85);
+    }
 
     .navbar-default .navbar-brand {
-        color: #eeeeee;
+        color: #ffffff;
         font-size: 1.5em;
         padding-top: 10px;
 
@@ -142,10 +148,25 @@
         margin-bottom: 1px;
         font-size: 24px;
         font-weight: 600;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
     }
 
     .navbar-header {
         display: inline;
+    }
+
+    .navbar {
+            border-radius: 0px 0px 4px 4px;
+            border-top: 2px solid rgb(0, 182, 85);
+            border: none;
+    }
+
+    .icon-nav {
+        font-size: 1.25em;
+        vertical-align: middle;
+        margin-top: -0.125em;
+        margin-bottom: 1px;
+        margin-right: 4px;
     }
 
 </style>
