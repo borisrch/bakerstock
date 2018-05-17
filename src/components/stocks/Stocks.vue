@@ -16,11 +16,10 @@
           <div class="text-right">
               <button class="btn btn-primary" v-if="!showForm" @click="newItem">
                   <i class="material-icons" style="font-size: 1.25em; vertical-align: middle; margin-top: -0.125em">add_box</i>
-                  <strong>New Product</strong>
+                  <strong class="button-text">New Product</strong>
               </button>
           </div>
       </div>
-      <button @click="add">Static Ingredient Add</button>
   </div>
 </template>
 
@@ -45,17 +44,6 @@ export default {
       }
     },
     methods: {
-        add() {
-          const id = data.length + 1
-          const name = 'name'
-          const price = 0
-          const test = {
-              id: id,
-              name: name,
-              price: price
-          }
-          data.push(test)
-        },
         newItem() {
             this.showForm = !this.showForm
         },
@@ -92,7 +80,13 @@ export default {
 
     .btn-primary:hover {
         background-color: #64B5F6;
+        margin-top: -1px;
     }
+
+    .button-text {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+    }
+
     .text-left {
         display: inline-block;
     }
@@ -107,6 +101,7 @@ export default {
 
     .container {
         padding-left: 0px;
+        font-family: 'Muli', sans-serif;
     }
 </style>
 
