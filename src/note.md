@@ -1,0 +1,1 @@
+In stocks/stock.vue, two-way binding with v-model at the quantity input returns a string e.g. "12" instead of an int 12. Helper method placed before calling the BUYSTOCK method is used to convert string -> int.
