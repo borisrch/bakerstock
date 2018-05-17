@@ -1,18 +1,24 @@
-# vue-cli
+# BakerStock
 
-> A Vue.js project
+> A Vue.js project - WIP
 
-## Build Setup
+## TODO - Functional
 
-``` bash
-# install dependencies
-npm install
+#### General:
+- User sign in and authentication to Firebase.
+    - Implement username in notes.
+    - Implement sign in/sign out.
+#### Order Page:
+- "Buy All" button in order page.
+- "New Product" validation. 
 
-# serve with hot reload at localhost:8080
-npm run dev
+#### Notes Page:
+- Notes should update state and be stored onto Firebase.
 
-# build for production with minification
-npm run build
-```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## NFR
+- Date/session should be more visible. (Top bar above header along with Sign out)
+- Inventory page not clear enough. Separate inventory display logic and inventory adjustment logic.
+- Unified font (muli)
+- Fix Notes page table.
