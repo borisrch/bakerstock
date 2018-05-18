@@ -85,6 +85,7 @@
                 this.info = ""
                 this.price = ""
                 this.$v.$reset();
+                this.$emit('resetForm');
             },
             resetForm () {
                 this.$emit('resetForm')
