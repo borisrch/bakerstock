@@ -110,6 +110,7 @@
 
         border-bottom: 4px solid rgb(0, 182, 85);
         background-color: rgb(61, 96, 126);
+
     }
 
     .navbar-default .navbar-nav>.active>a,
@@ -119,6 +120,7 @@
         background-color: rgb(32, 50, 68);
         border-bottom: 4px solid rgb(0, 182, 85);
         overflow: hidden;
+        color: white;
     }
     .navbar-default .navbar-nav>.active>a>.icon-nav {
         color: rgb(0, 182, 85);
