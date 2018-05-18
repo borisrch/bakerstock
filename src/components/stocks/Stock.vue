@@ -61,12 +61,22 @@ export default {
   methods: {
       buyStock() {
           let toint = parseInt(this.quantity)
+
           const order = {
               stockId: this.stock.id,
               stockPrice: this.stock.price,
               quantity: toint
           }
-          this.$store.dispatch('buyStock', order)
+
+          const pendingOrder = {
+              stockId: this.stock.id,
+              stockName: this.stock.name,
+              quantity: toint,
+              stockPrice: this.stock.price,
+          }
+          //this.$store.dispatch('buyStock', order)
+          this.$store.dispatch('addPending', pendingOrder)
+
           this.quantity = 0
       }
   }
