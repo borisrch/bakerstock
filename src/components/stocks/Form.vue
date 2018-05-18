@@ -81,6 +81,10 @@
                     price: this.price
                 };
                 stocks.push(product);
+                this.name = ""
+                this.info = ""
+                this.price = ""
+                this.$v.$reset();
             },
             resetForm () {
                 this.$emit('resetForm')
