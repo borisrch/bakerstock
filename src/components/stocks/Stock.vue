@@ -4,8 +4,14 @@
             <div class="panel-heading">
                 <h3 class="panel-title">
                     {{ stock.name }}
-                    <br>
-                    <small>Price: ${{ stock.price }}</small>
+
+                    <div class="prices">
+                        Price: <span class="badge-price">${{ stock.price }}</span>
+                        <div class="total" v-if="moreThanOne">
+                            Total:
+                            <span class="badge-total">${{ stock.price * quantity }}</span>
+                        </div>
+                    </div>
                 </h3>
             </div>
             <div class="panel-body">
@@ -43,7 +49,14 @@ export default {
       },
       insufficientFunds() {
           return this.quantity * this.stock.price > this.funds;
-      }
+      },
+        moreThanOne() {
+          if(this.quantity > 0) {
+              return true;
+          } else {
+              return false;
+          }
+        }
     },
   methods: {
       buyStock() {
@@ -84,5 +97,44 @@ export default {
 
     .form-control {
         width: 50%;
+    }
+
+    p {
+        margin-bottom: 0px;
+    }
+
+    .prices {
+        padding-top: 5px;
+    }
+
+    .badge-price {
+        color: #eef0eb;
+        background-color: #0288D1;
+        border-radius: 25px;
+        font-size: 12px;
+        padding: 3px 3px;
+    }
+
+    .badge-total {
+        color: #FFF3E0;
+        background-color: #F57C00;
+        border-radius: 25px;
+        font-size: 12px;
+        padding: 3px 3px;
+    }
+
+    .total {
+        display: inline;
+    }
+
+    .btn-success {
+        background-color: rgb(0, 182, 85);
+        border: 0;
+        box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+    }
+
+    .btn-success:hover {
+        background-color: rgb(0, 205, 91);
+        margin-top: -1px;
     }
 </style>
