@@ -2,7 +2,7 @@
     <nav class="navbar navbar-default" id="nav">
         <div class="container-fluid">
             <div class="navbar-header">
-                <router-link to="/" class="navbar-brand">
+                <router-link to="/home" class="navbar-brand">
                     <div>
                         <p id="title">
                             <i class="material-icons logo" id="brand">shopping_basket</i>
@@ -13,6 +13,11 @@
 
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <router-link to="/home"
+                                 activeClass="active"
+                                 tag="li">
+                        <a><ion-icon class="icon-nav" name="stats"></ion-icon>Dashboard</a></router-link>
+
                     <router-link to="/inventory"
                                  activeClass="active"
                                  tag="li">
