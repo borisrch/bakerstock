@@ -16,7 +16,7 @@
           <div class="text-right">
               <button class="btn btn-primary" v-if="!showForm" @click="newItem">
                   <i class="material-icons" style="font-size: 1.25em; vertical-align: middle; margin-top: -0.125em">add_box</i>
-                  <strong class="button-text">New Product</strong>
+                  <strong class="button-text">New Item</strong>
               </button>
           </div>
       </div>
