@@ -22,6 +22,11 @@ const router = new VueRouter({
   routes: routes
 });
 
+// To disabled "unknown" custom elements from ion-icon cdn
+
+Vue.config.ignoredElements = [
+    'ion-icon'
+];
 
 
 new Vue({
