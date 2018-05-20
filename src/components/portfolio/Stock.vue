@@ -16,13 +16,13 @@
                             class="form-control"
                             placeholder="Quantity"
                             v-model="quantity"
-                            :class="{danger: isDisabled}"
                     >
                 </div>
-                <div class="pull-right">
+                <div class="pull-right" v-if="!isEmpty">
                     <button
                             class="btn btn-success"
                             @click="sellStock"
+
                             :disabled="isDisabled"
                             >{{ isDisabled ? 'Not enough' : 'Remove' }}
                     </button>
@@ -66,11 +66,15 @@
         },
         computed: {
             isDisabled() {
-                console.log('Quantity: ' + this.quantity)
-                console.log('Stock Quantity: ' + this.stock.quantity)
-
                 //return this.quantity > this.stock.quantity
                 if (this.quantity > this.stock.quantity || this.quantity <= 0) {
+                    return true
+                } else {
+                    return false
+                }
+            },
+            isEmpty() {
+                if (this.quantity === 0) {
                     return true
                 } else {
                     return false
