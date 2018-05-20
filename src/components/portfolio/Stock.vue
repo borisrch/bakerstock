@@ -1,10 +1,12 @@
 <template>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-3">
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title">
                     {{ stock.name }}
-                    <small>(Price: {{ stock.price }} | Quantity: {{ stock.quantity }})</small>
+                    <div class="prices">
+                        Inventory Quantity: <span class="badge-quantity">{{ stock.quantity }}</span>
+                    </div>
                 </h3>
             </div>
             <div class="panel-body">
@@ -33,6 +35,22 @@
 <style scoped>
     .danger {
         border: 1px solid red;
+    }
+
+    .badge-quantity {
+        color: #eef0eb;
+        background-color: #0288D1;
+        border-radius: 25px;
+        font-size: 12px;
+        padding: 3px 3px;
+    }
+
+    .pull-left {
+        max-width: 100px;
+    }
+
+    .form-control {
+        width: 100%;
     }
 </style>
 
