@@ -1,5 +1,5 @@
 const state = {
-    funds: 10000,
+    //funds: 10000,
     stocks: []
 }
 
@@ -49,9 +49,6 @@ const getters = {
                 price: record.price
             }
         })
-    },
-    funds(state) {
-        return state.funds;
     }
 }
 
