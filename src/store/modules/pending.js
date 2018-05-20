@@ -1,5 +1,6 @@
 const state = {
-    pending: []
+    pending: [],
+    funds: 10000,
 }
 
 const mutations = {
@@ -16,7 +17,11 @@ const mutations = {
                 price: stockPrice
             })
         }
+
+        state.funds -= stockPrice * quantity
     },
+
+
     'REMOVE_PENDING' (state, {stockId, stockName, quantity}) {
         let elementPos = state.pending.map(function(x) {return x.id;}).indexOf(stockId);
         state.pending.splice(elementPos, 1);
@@ -35,6 +40,9 @@ const actions = {
 const getters = {
     getPending(state) {
         return state.pending;
+    },
+    funds(state) {
+        return state.funds;
     }
 }
 
