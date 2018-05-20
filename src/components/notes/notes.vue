@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="content">
         <h3>Notes:</h3>
         <hr>
         <div class="container">
@@ -142,6 +142,10 @@
 
     .invalid {
         border-color: #E64A19;
+    }
+
+    #content {
+        font-family: 'Muli', sans-serif;
     }
 
 </style>
