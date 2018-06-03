@@ -82,7 +82,7 @@
                 this.$http.put('data.json', data)
             },
             loadData() {
-                this.$store.dispatch('loadData')
+                this.$store.dispatch('loadData');
             }
         }
     }
