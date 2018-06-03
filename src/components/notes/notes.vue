@@ -4,7 +4,7 @@
         <hr>
         <div class="container">
             <div class="row">
-                <div class="col-xs-3" id="form">
+                <div class="col-xs-5 col-md-4" id="form">
                     <p>Please fill out all fields to submit a note.</p>
                 <form>
                     <div class="form-group">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-                <div class="col-xs-9">
+                <div class="col-xs-7 col-md-8">
                     <app-notes-table></app-notes-table>
                 </div>
             </div>
